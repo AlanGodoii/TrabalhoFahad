@@ -1,0 +1,16 @@
+html,body{margin:0;height:100%;background:#000;font-family:system-ui,Arial,sans-serif}
+#scene-container{position:fixed;inset:0;overflow:hidden}
+canvas{display:block}
+.hud{position:fixed;top:16px;left:16px;background:rgba(0,0,0,.55);color:#fff;padding:12px 14px;border-radius:12px;backdrop-filter:blur(4px);z-index:10;min-width:280px}
+.hud h3{margin:0 0 6px 0;font-size:14px}
+.hud p{margin:0 0 10px 0;font-size:12px;opacity:.9}
+.hud .row{display:flex;gap:8px;align-items:center;margin-top:8px}
+.btn{background:#22c55e;color:#062213;border:0;padding:8px 10px;border-radius:8px;cursor:pointer;font-weight:700}
+.powerbar{width:160px;height:8px;background:#233;border-radius:8px;overflow:hidden}
+.powerbar .fill{height:100%;width:0%;background:#22c55e}
+.panel{position:fixed;right:12px;top:12px;width:240px;background:rgba(10,12,20,.6);color:#fff;border-radius:12px;padding:12px;backdrop-filter:blur(4px);z-index:11}
+.panel h4{margin:6px 0 6px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:4px}
+.field{display:flex;align-items:center;gap:8px;margin:6px 0}
+.field label{width:88px;font-size:12px;opacity:.9}
+.field input[type=range]{flex:1}
+.panel button{width:100%;margin-top:8px;background:#334155;color:#fff;border:0;padding:8px 10px;border-radius:8px;cursor:pointer}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mesa de Sinuca 3D — Manual + Painel Local</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <script type="importmap">
+  {"imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }}
+  </script>
+</head>
+<body>
+  <div id="scene-container"></div>
+
+  <!-- Painel local (direita) -->
+  <aside class="panel">
+    <h4>Scene</h4>
+    <div class="field"><label>Amb Light</label><input id="amb" type="range" min="0" max="2" step="0.01" value="0.6"></div>
+    <div class="field"><label>Dir Light</label><input id="dir" type="range" min="0" max="2" step="0.01" value="0.9"></div>
+    <div class="field"><label>Dir Color</label><input id="dirColor" type="color" value="#ffffff"></div>
+    <h4>Camera</h4>
+    <div class="field"><label>X</label><input id="camX" type="range" min="-6" max="6" step="0.01" value="-1"></div>
+    <div class="field"><label>Y</label><input id="camY" type="range" min="0.2" max="6" step="0.01" value="2.8"></div>
+    <div class="field"><label>Z</label><input id="camZ" type="range" min="-6" max="6" step="0.01" value="3.6"></div>
+    <button id="resetCam">Reset Cam</button>
+  </aside>
+
+  <!-- HUD (esquerda) -->
+  <div class="hud">
+    <h3>Mesa de Sinuca 3D</h3>
+    <p>Arraste a partir da branca para mirar. Solte para tacar.</p>
+    <div class="powerbar"><div class="fill" id="pfill"></div></div>
+    <div class="row">
+      <button class="btn" id="resetBtn">Resetar</button>
+      <button class="btn" id="v34Btn">Vista ¾</button>
+      <button class="btn" id="topBtn">Vista Topo</button>
+    </div>
+  </div>
+
+  <script type="module" src="src/World/main.js"></script>
+</body>
+</html>
